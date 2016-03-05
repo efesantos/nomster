@@ -38,6 +38,8 @@ gem 'sprockets', '2.11.0'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
+#For pagination
+gem 'kaminari'
 
 
 # Use ActiveModel has_secure_password
