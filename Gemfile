@@ -41,6 +41,9 @@ gem 'sass-rails'
 #For pagination
 gem 'kaminari'
 
+#For forms
+gem 'simple_form'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
