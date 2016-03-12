@@ -3,7 +3,9 @@
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p><br />
+  <br />
+  <%= link_to 'Update details', edit_place_path %>
   <div class="pull-right">
-    <%= link_to 'Update place details', edit_place_path %>
+    <%= link_to 'Delete', place_path, method: :delete, data: {confirm:'Are you sure you want to delete this'}, class: 'btn btn-danger' %>
   </div>
 </div>

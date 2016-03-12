@@ -31,7 +31,16 @@ class PlacesController < ApplicationController
     else
       render 'edit'
     end
+  end
 
+  def destroy
+    @place = Place.find(params[:id])
+
+    if @place.destroy
+      redirect_to root_path
+    else
+      render 'edit'
+    end
   end
 
   private
