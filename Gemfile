@@ -47,6 +47,9 @@ gem 'simple_form'
 #For user authentication
 gem 'devise', '>=3.2.4'
 
+#To create fake data
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
