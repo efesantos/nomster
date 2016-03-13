@@ -31,3 +31,10 @@ body {
 .navbar-inverse .navbar-brand {
   color: #D65B31;
 }
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding:8px;
+}
