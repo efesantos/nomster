@@ -50,6 +50,12 @@ gem 'devise', '>=3.2.4'
 #To create fake data
 gem 'faker'
 
+#To convert addresses into longitude and latitude
+gem 'geocoder' 
+
+#To store API keys safely
+gem 'figaro', ">= 1.0.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
