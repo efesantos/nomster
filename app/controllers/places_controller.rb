@@ -66,5 +66,11 @@ class PlacesController < ApplicationController
       params.require(:place).permit(:name, :address, :description)
     end
 
+    def correct_user
+      if @place.user != current_user
+        redirect_to root_path
+        return flash[:alert]  = 'Not Allowed'
+      end
+    end
 
 end
