@@ -6,33 +6,30 @@
 
   <br />
 
-  <% if @place.latitude.present? && @place.longitude.present? %>
+ <% if @place.latitude.present? && @place.longitude.present? %>
 
-    <script type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script> 
-    <script type="text/javascript">
-      var map = null;
-              
-      function getMap()
-      {
-        map = new Microsoft.Maps.Map(document.getElementById('myMap'), {credentials: "Aq-iKD_5sQGBJDPFHKa9qGKUK0FZq157Xa1x6FatHGYAGP44eFFxf5L_TqeYJvmc"});
-      }
-        
-      function updatePushpinLocation()
-      {
-        var pushpin= new Microsoft.Maps.Pushpin(map.getCenter(), null); 
-        map.entities.push(pushpin); 
-        pushpin.setLocation(new Microsoft.Maps.Location(<%= @place.latitude %>, <%=@place.longitude %>));   
-      }
+  <script>
 
-      function setView()
-      {
-        map.setView({zoom: 10, center: new Microsoft.Maps.Location(<%= @place.latitude %>, <%=@place.longitude %>)});
-      }
+  function initMap() {
+    var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>}; 
 
-    </script>
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: myLatLng
+    });
 
-    <body onload="getMap(), updatePushpinLocation(), setView();"></body>
-    <div id="myMap"></div>    
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+
+  </script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+
+  <div id="map"></div>
   <% end %>
 
   <br />
