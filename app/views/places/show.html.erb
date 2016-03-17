@@ -10,20 +10,20 @@
 
   <script>
 
-  function initMap() {
-    var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>}; 
+    function initMap() {
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>}; 
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
-      center: myLatLng
-    });
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: myLatLng
+      });
 
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
-  }
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
 
   </script>
   <script async defer
