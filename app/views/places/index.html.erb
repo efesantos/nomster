@@ -5,9 +5,31 @@
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+    <div class="col-xs-12">
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
+    </div>
+
+    <% if place.comments.present? %>
+      <div class="col-xs-12 col-sm-6">
+      <blockquote>
+        <% if place.comments.last.humanized_rating.present? %>
+          <b><%= place.comments.last.humanized_rating %></b>
+        <% end %>
+          <%= place.comments.last.message %>
+        <small><%= place.comments.last.user.email %></small>
+      </blockquote>
+      </div>
     <% end %>
+
+    <% if place.photos.present? %> 
+      <div class="col-xs-12 col-sm-6">
+        <div class="center">
+          <b><%= image_tag place.photos.first.picture %></b>
+        </div>
+      </div>
+    <% end %> 
 
   </div>
 <% end %>

@@ -1,6 +1,5 @@
 class PlacesController < ApplicationController
 
-  include PlacesHelper
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy] #authenticate_user is a method from the Devise gem
 
   def index
@@ -25,6 +24,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
+    @photo = Photo.new
   end
 
   def edit

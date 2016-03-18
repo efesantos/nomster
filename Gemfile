@@ -56,6 +56,11 @@ gem 'geocoder'
 #To store API keys safely
 gem 'figaro', ">= 1.0.0"
 
+#To upload files
+gem 'carrierwave'
+
+#
+gem 'fog', '~> 1.3.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
