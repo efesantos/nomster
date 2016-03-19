@@ -135,6 +135,13 @@
       <br />
       <b><%= image_tag photo.picture %></b>
       <br />
+        <% if current_user && current_user == @place.user %>
+          <div class="pull-right">
+            <%= link_to 'Delete', place_photo_path(@place, photo), method: :delete, class: 'btn btn-danger' %>
+          </div>
+        <% end %>
+
+
       <br />
     </div>
   </div>

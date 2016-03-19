@@ -8,8 +8,11 @@
 =begin
 40.times do |n|
   name = Faker::Company.name
-  address = Faker::Address.city
-  description = Faker::Lorem.sentence(5)
+  address = Faker::Address.street_name
+  description = ["Fabulous", "Great spot", "Top rate",
+                "I recommend", "Needs improvements",
+                 "Not too bad", "Average"].sample
+
   user_id = rand(1..3)
 
   Place.create!(name: name, 
@@ -23,7 +26,7 @@ end
   
   message = Faker::Lorem.sentence(5)
   user_id = rand(1..3)
-  place_id = rand(1..88)
+  place_id = rand(1..40)
   rating = ["1_star", "2_stars", "3_stars", "4_stars", "5_stars"].sample
 
   Comment.create!(message: message, 
@@ -32,3 +35,5 @@ end
                 rating: rating)
 end
 =end
+
+
