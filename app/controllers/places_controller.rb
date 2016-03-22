@@ -51,7 +51,7 @@ class PlacesController < ApplicationController
   def destroy
     @place = Place.find(params[:id])
 
-    correct_user #defined in helper
+    correct_user
 
     if @place.destroy
       redirect_to root_path

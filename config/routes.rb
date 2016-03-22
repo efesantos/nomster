@@ -9,7 +9,9 @@ Nomster::Application.routes.draw do
     resources :photos, only: [:create, :destroy]
   end
 
-  resources :users, only: :show
+  resources :users, only: :show do
+    resources :comments, only: :destroy
+  end
 
 
 end
