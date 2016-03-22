@@ -1,5 +1,6 @@
 Nomster::Application.configure do
-  
+
+=begin  
 ActionMailer::Base.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'],
   :address        => ENV['MAILGUN_SMTP_SERVER'],
@@ -9,6 +10,7 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
 }
 ActionMailer::Base.delivery_method = :smtp
+=end
 
   config.action_mailer.default_url_options = {host: 'nomster-elmer-santos.herokuapp.com'}
   # Settings specified here will take precedence over those in config/application.rb.

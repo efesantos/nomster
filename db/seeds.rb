@@ -35,5 +35,6 @@ end
                 rating: rating)
 end
 
+#Comment.create!(message: Faker::Lorem.sentence(5), user_id: rand(1..3), place_id: rand(1..40), rating: ["1_star", "2_stars", "3_stars", "4_stars", "5_stars"].sample)
 
 
