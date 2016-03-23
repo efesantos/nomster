@@ -62,13 +62,15 @@ GEM
       thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (1.31.0)
+    fog (1.36.0)
+      fog-aliyun (>= 0.1.0)
       fog-atmos
-      fog-aws (~> 0.0)
+      fog-aws (>= 0.6.0)
       fog-brightbox (~> 0.4)
-      fog-core (~> 1.30)
-      fog-ecloud
-      fog-google (>= 0.0.2)
+      fog-core (~> 1.32)
+      fog-dynect (~> 0.0.2)
+      fog-ecloud (~> 0.1)
+      fog-google (<= 0.1.0)
       fog-json
       fog-local
       fog-powerdns (>= 0.1.1)
@@ -82,9 +84,15 @@ GEM
       fog-terremark
       fog-vmfusion
       fog-voxel
+      fog-xenserver
       fog-xml (~> 0.1.1)
       ipaddress (~> 0.5)
       nokogiri (~> 1.5, >= 1.5.11)
+    fog-aliyun (0.1.0)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      ipaddress (~> 0.8)
+      xml-simple (~> 1.1)
     fog-atmos (0.1.0)
       fog-core
       fog-xml
@@ -101,10 +109,14 @@ GEM
       builder
       excon (~> 0.45)
       formatador (~> 0.2)
+    fog-dynect (0.0.3)
+      fog-core
+      fog-json
+      fog-xml
     fog-ecloud (0.3.0)
       fog-core
       fog-xml
-    fog-google (0.1.1)
+    fog-google (0.1.0)
       fog-core
       fog-json
       fog-xml
@@ -148,6 +160,9 @@ GEM
       fission
       fog-core
     fog-voxel (0.1.0)
+      fog-core
+      fog-xml
+    fog-xenserver (0.2.3)
       fog-core
       fog-xml
     fog-xml (0.1.2)
@@ -240,6 +255,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
+    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
@@ -251,7 +267,7 @@ DEPENDENCIES
   devise (>= 3.2.4)
   faker
   figaro (>= 1.0.0)
-  fog (~> 1.31.0)
+  fog (~> 1.36.0)
   geocoder
   jbuilder (~> 1.2)
   jquery-rails
