@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.9'
+gem 'rails', '4.0.1'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -60,7 +60,7 @@ gem 'figaro', ">= 1.0.0"
 gem 'carrierwave'
 
 #
-gem 'fog', '~> 1.31.0'
+gem 'fog', '~> 1.31.0 '
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
